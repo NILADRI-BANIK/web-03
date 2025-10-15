@@ -47,7 +47,7 @@ const Header = () => {
           <div className={styles.centerImage}>
             <div className={styles.heroImageContainer}>
               <img
-                src="/src/assets/image/Rectangle 405.png"
+                src={doctorImage}
                 alt="Dr. Michel Jordan"
                 className={styles.heroImage}
               />
