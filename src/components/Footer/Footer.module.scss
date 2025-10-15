@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+
+.footer {
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.contactSection {
+  background-color: #515151;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactTitle {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+}
+
+.contactIcons {
+  display: flex;
+  gap: 30px;
+  background-color: #3a3a3a;
+  padding: 15px 35px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.iconLink1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;      // Figma width
+  height: 34px;     // Figma height
+   // Figma background color
+  border-radius: 4px;   // optional, adjust if needed
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.emailIcon {
+  color: #FFFBFB;    // icon color (adjust if needed)
+  width: 38px;       // icon size as per Figma
+  height: 34px;
+}
+
+.iconLink2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;         // adjust to match design
+  height: 34px; // Figma background
+  border-radius: 4px;  // optional
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.locationIcon {
+  color: #FFFCFC; // icon color
+  width: 40px;
+  height: 60px;
+}
+
+.iconLink3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;         // adjust as per design
+  height: 34px;
+  border-radius: 4px;  // optional
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.phoneIcon {
+  color: #FFFEFE;   // icon color
+  width: 30px;
+  height: 50px;
+}
+
+.messageSection {
+  background-image: url('../../assets/image/Rectangle 416.png'); // relative path
+  background-size: cover;       // make the image cover entire section
+  background-position: center;  // center the image
+  background-repeat: no-repeat; // do not repeat
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.messageTitle {
+  font-family: 'Poppins', sans-serif; // Figma font
+  font-weight: 600; // semi-bold
+  font-size: 36px;
+  line-height: 104%;
+  letter-spacing: 0;
+  color: #000000; // adjust if needed
+  margin-bottom: 20px;
+}
+
+.messageText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; // light
+  font-size: 36px; // according to Figma
+  line-height: 104%;
+  text-align: center;
+  color: #000000; // adjust based on background
+  max-width: 769px; // Figma width
+  margin: 0 auto;
+}
+
+
+.messageTitle {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.messageText {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;          // Light
+  font-style: normal;
+  font-size: 36px;
+  line-height: 104%;         // approx 1.04
+  letter-spacing: 0;
+  text-align: center;
+  color: #FFF9F9;            // text color (assuming contrast on background)
+  width: 769px;
+  height: 131px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;            // center horizontally
+  padding: 1rem;             // optional padding for responsive
+}
+
+
+// Responsive Design
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .messageTitle {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .contactIcons {
+    gap: 20px;
+    padding: 12px 25px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .messageTitle {
+    font-size: 1.25rem;
+  }
+
+  .messageText {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .contactIcons {
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contactSection,
+  .messageSection {
+    padding: 40px 15px;
+  }
+}

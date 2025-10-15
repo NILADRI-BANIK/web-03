@@ -1,0 +1,380 @@
+// src/components/Hero/Hero.module.scss
+
+.hero {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+  padding: 4rem 2rem;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+.sectionTitleBox {
+  width: 700px;
+  height: 128px;
+  background-color: rgba(3, 2, 2, 0.35); // ✅ opacity 0.35
+  border-radius: 22.92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-left: 62px;
+  /* from your Figma (left: 62px) */
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
+}
+
+.seeAllBtn {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(40, 40, 40, 0.6);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
+    color: #d4af37;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    align-self: flex-end;
+  }
+}
+
+// Certifications Section
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.certificateCard {
+  position: relative;
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(30, 30, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+    border-color: rgba(212, 175, 55, 0.5);
+
+
+    .certificateImage {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+
+  @media (max-width: 480px) {
+    height: 180px;
+  }
+}
+
+.certificateImage {
+  width: 105%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+
+
+.testimonialsContainer {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stethoscopeImage {
+  position: relative;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  &:hover .medicalImage {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 1024px) {
+    height: 350px;
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+.medicalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.3) brightness(0.9);
+  transition: all 0.4s ease;
+}
+
+.testimonialsCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: -80px; // overlap effect
+  z-index: 2;
+}
+
+.testimonialCard {
+  position: relative;
+  background: rgba(40, 40, 40, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 1.5rem 2.5rem 3.5rem 5rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+    flex-direction: row;
+  }
+}
+
+.testimonialAvatar {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  background: #fff;
+  z-index: 3;
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    left: -25px;
+  }
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonialContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 40px; // space for avatar
+}
+
+.testimonialHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.testimonialName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.testimonialRating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star {
+  color: #ffd700;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.testimonialDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+
+// Plans Section
+.plansGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.planCard {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.planTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.planDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.planBtn {
+  padding: 0.8rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+  background: transparent;
+  color: #d4af37;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 2rem;
+
+  &:hover {
+    background: #d4af37;
+    color: #0a0a0a;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
